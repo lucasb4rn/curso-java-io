@@ -19,6 +19,13 @@ public class TesteLeitura {
 		 *  InputStreamReader isr = new InputStreamReader(fis); 
 		 *  BufferedReader br = new BufferedReader(isr);
 		 */
+		
+		
+		/*
+		 *  InputStream fis = new FileInputStream("lorem.txt"); //forma generica abstrata
+		 *  Reader isr = new InputStreamReader(fis); //forma generica classe abstrata
+		 *  BufferedReader br = new BufferedReader(isr);
+		 */
 
 		String linha = br.readLine();
 
