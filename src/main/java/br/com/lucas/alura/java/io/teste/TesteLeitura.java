@@ -15,7 +15,7 @@ public class TesteLeitura {
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("lorem.txt")));
 		
 		/*
-		 * FileInputStream fis = new FileInputStream("lorem.txt");
+		 *  FileInputStream fis = new FileInputStream("lorem.txt");
 		 *  InputStreamReader isr = new InputStreamReader(fis); 
 		 *  BufferedReader br = new BufferedReader(isr);
 		 */
