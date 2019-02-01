@@ -15,16 +15,20 @@ public class TesteSerializacaoCliente {
 		cliente.setProfissao("Dev");
 		cliente.setCpf("32156465");
 		
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("objecto.bin"));
-		oos.writeObject(cliente);
-		oos.close();
-		
-		
 		/*
-		 * ObjectInputStream ois = new ObjectInputStream(new
-		 * FileInputStream("objecto.bin")); String nome2 = (String) ois.readObject();
-		 * System.out.println(nome2);
+		 * ObjectOutputStream oos = new ObjectOutputStream(new
+		 * FileOutputStream("objecto.bin")); oos.writeObject(cliente); oos.close();
 		 */
+		
+		
+		
+		  ObjectInputStream ois = new ObjectInputStream(new FileInputStream("objecto.bin")); 
+		  
+		  Cliente cliente1 = (Cliente) ois.readObject();
+		  
+		  System.out.println(cliente1.getNome());
+		  System.out.println(cliente1.getCpf());
+		 
 		
 		
 	}
