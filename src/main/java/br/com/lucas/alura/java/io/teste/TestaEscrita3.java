@@ -20,7 +20,7 @@ public class TestaEscrita3 {
 		
 		
 		//Ambos comandos abaixo fazem a mesma coisa, porém o printWriter foi lançado depois e com ele outras formas de ler arquivos.
-		PrintStream ps = new PrintStream("lorem2.txt"); //versão do java 1.0
+		PrintStream ps = new PrintStream("lorem2.txt", "UTF-8"); //versão do java 1.0
 		//PrintWriter ps = new PrintWriter("lorem2.txt"); // versao do java 1.1
 		
 		ps.println("Meu nome é Lucas e estou testando a escrita no arquivo");

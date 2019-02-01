@@ -9,7 +9,7 @@ public class TesteLeitura2Scanner {
 	
 	public static void main(String[] args) throws Exception {
 		
-		Scanner scanner = new Scanner(new File("contas.csv"));
+		Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");
 		
 		while(scanner.hasNext()){
 		String linha = scanner.nextLine();
