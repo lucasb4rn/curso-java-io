@@ -8,7 +8,7 @@ public class TesteUnicodeEncoding {
 
 	
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		String s = "C";
+		String s = "ç";
 		System.out.println(s.codePointAt(0));
 		
 		
@@ -18,16 +18,24 @@ public class TesteUnicodeEncoding {
 		
 		
 		byte[] bytes = s.getBytes("windows-1252");
-		System.out.println(bytes.length + ", windows-1252");
+		System.out.println(bytes.length + ", windows-1252, ");
+		String novaString = new String(bytes, "windows-1252");
+		System.out.println(novaString);
 		
 		bytes = s.getBytes("UTF-8");
-		System.out.println(bytes.length + ", UTF-8");
+		System.out.print(bytes.length + ", UTF-8, ");
+		novaString = new String(bytes, "UTF-8");
+		System.out.println(novaString);
 		
 		bytes = s.getBytes("UTF-16");
-		System.out.println(bytes.length + ", UTF-16");
+		System.out.print(bytes.length + ", UTF-16, ");
+		novaString = new String(bytes, "UTF-16");
+		System.out.println(novaString);
 		
 		bytes = s.getBytes(StandardCharsets.US_ASCII);
-		System.out.println(bytes.length + ", US-ASCII");
+		System.out.print(bytes.length + ", US-ASCII, ");
+		novaString = new String(bytes, "US-ASCII");
+		System.out.println(novaString);
 		
 		
 		
